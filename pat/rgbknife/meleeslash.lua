@@ -27,7 +27,7 @@ function MeleeSlash:update(dt, fireMode, shiftHeld)
     hueshift = 0
   end
 	animator.setGlobalTag("hueshift", "?hueshift="..hueshift)
-	activeItem.setCursor("/pat/rgbknife/cursor/"..math.floor(hueshift / 5)..".cursor")
+	activeItem.setCursor("/pat/rgbknife/cursor/rgbknife.cursors:"..math.floor(hueshift / 5))
 	
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
