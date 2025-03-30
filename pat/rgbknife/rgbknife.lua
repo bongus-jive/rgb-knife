@@ -5,7 +5,7 @@ RgbKnife = WeaponAbility:new()
 
 function RgbKnife:init()
   self.hueCycleTime = self.hueCycleTime / 360
-	self.hueshift = 0
+  self.hueshift = 0
   if activeItem.hand() == "alt" then
     self.hueshift = 25
   end
@@ -25,11 +25,11 @@ end
 function RgbKnife:update(dt, fireMode, shiftHeld)
   WeaponAbility.update(self, dt, fireMode, shiftHeld)
 
-	self.hueshift = (self.hueshift + self.dt / self.hueCycleTime) % 360
+  self.hueshift = (self.hueshift + self.dt / self.hueCycleTime) % 360
 
-	animator.setGlobalTag("hueshift", "?hueshift=" .. self.hueshift)
+  animator.setGlobalTag("hueshift", "?hueshift=" .. self.hueshift)
   animator.setLightColor("glow", self:hsvToRgb(self.hueshift, 1, 0.25))
-	activeItem.setCursor("/pat/rgbknife/cursor/rgbknife.cursors:" .. math.floor(self.hueshift / 5))
+  activeItem.setCursor("/pat/rgbknife/cursor/rgbknife.cursors:" .. math.floor(self.hueshift / 5))
 
   if self.cooldownTimer > 0 then
     self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
