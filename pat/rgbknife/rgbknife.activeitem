@@ -18,23 +18,21 @@
     "blade": "rgbknife.png",
     "bladefb": "rgbknifefb.png"
   },
-  "animationCustom": {
-    "sounds": {
-      "fire": [ "/sfx/melee/swing_dagger.ogg" ]
-    }
-  },
 
-  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+  "scripts": [ "/items/active/weapons/melee/meleeweapon.lua" ],
 
   "elementalType": "physical",
 
   "aimOffset": 0.0,
   "primaryAbility": {
-    "scripts" : ["/pat/rgbknife/meleeslash.lua"],
-    "class": "MeleeSlash",
+    "scripts": [ "/pat/rgbknife/rgbknife.lua" ],
+    "class": "RgbKnife",
 
     "fireTime": 0.35,
     "baseDps": 9.0,
+    "hueCycleTime": 3,
+    "fireSoundPitchRange": [ 0.94, 1.06 ],
+
     "damageConfig": {
       "damageSourceKind": "dagger",
       "statusEffects": [ ],
@@ -42,6 +40,7 @@
       "knockback": 10,
       "timeoutGroup": "primary"
     },
+
     "stances": {
       "idle": {
         "armRotation": -90,
@@ -52,19 +51,23 @@
       },
       "windup": {
         "duration": 0.05,
+
         "armRotation": -20,
         "weaponRotation": -20,
         "weaponOffset": [ 0, 2 ],
         "allowFlip": true,
-        "allowRotate": false
+        "allowRotate": true
       },
       "fire": {
-        "duration": 0.2,
+        "swooshTime": 0.05,
+        "duration": 0.12,
+        "winddownTime": 0.08,
+
         "armRotation": -135,
         "weaponRotation": 40,
         "weaponOffset": [ 0, 2.25 ],
         "allowFlip": true,
-        "allowRotate": false
+        "allowRotate": true
       }
     }
   },
