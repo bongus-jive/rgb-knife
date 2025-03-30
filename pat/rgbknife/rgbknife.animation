@@ -8,7 +8,7 @@
       "swoosh": {
         "default": "idle",
         "states": {
-          "idle": {},
+          "idle": { },
           "fire": {
             "frames": 3,
             "cycle": 0.08,
@@ -52,7 +52,7 @@
           "swoosh": {
             "fire": {
               "properties": {
-                "image": "swoosh.png:<frame><hueshift>",
+                "image": "<partImage>:<frame><hueshift>",
                 "damageArea": [ [ -0.75, 1.5 ], [ 0.75, 1.5 ], [ 2.125, 0.75 ], [ 2.125, -0.5 ], [ 1.0, -1.5 ], [ -2.25, -1.5 ], [ -3.25, -0.5 ] ]
               }
             }

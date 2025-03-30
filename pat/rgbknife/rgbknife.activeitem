@@ -11,12 +11,13 @@
   "twoHanded": false,
   "itemTags": [ "weapon", "melee", "dagger" ],
 
-  "inventoryIcon": "icon.png",
+  "inventoryIcon": "images/icon.png",
 
   "animation": "rgbknife.animation",
   "animationParts": {
-    "blade": "rgbknife.png",
-    "bladefb": "rgbknifefb.png"
+    "blade": "images/rgbknife.png",
+    "bladefb": "images/rgbknifefb.png",
+    "swoosh": "images/swoosh.png"
   },
 
   "scripts": [ "/items/active/weapons/melee/meleeweapon.lua" ],
