@@ -11,7 +11,7 @@
           "idle": { },
           "fire": {
             "frames": 3,
-            "cycle": 0.08,
+            "cycle": 0.09,
             "mode": "transition",
             "transition": "idle"
           }
