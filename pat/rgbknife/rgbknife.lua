@@ -27,7 +27,7 @@ function RgbKnife:update(dt, fireMode, shiftHeld)
 
   self.hueshift = (self.hueshift + self.dt / self.hueCycleTime) % 360
 
-  animator.setGlobalTag("hueshift", "?hueshift=" .. self.hueshift)
+  animator.setGlobalTag("hueshift", "?hueshift=" .. math.floor(self.hueshift / 3) * 3)
   animator.setLightColor("glow", self:hsvToRgb(self.hueshift, 1, 0.25))
   activeItem.setCursor("/pat/rgbknife/cursor/rgbknife.cursors:" .. math.floor(self.hueshift / 5))
 
