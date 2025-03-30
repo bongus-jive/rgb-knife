@@ -49,6 +49,8 @@ end
 function RgbKnife:fire()
   local stance = self.stances.fire
   self.weapon:setStance(stance)
+
+  self.damageConfig.damageSourceKind = util.randomChoice(self.damageKinds)
   
   local timer = stance.duration
   local progress = 0

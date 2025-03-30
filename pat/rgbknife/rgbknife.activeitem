@@ -42,6 +42,8 @@
       "timeoutGroup": "primary"
     },
 
+    "damageKinds": [ "dagger", "firedagger", "poisondagger", "icedagger", "electricdagger" ],
+
     "stances": {
       "idle": {
         "armRotation": -90,
